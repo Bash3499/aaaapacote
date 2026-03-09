@@ -1,0 +1,28 @@
+========================================
+  sqlite3.dll - Biblioteca nativa SQLite
+========================================
+
+O Mono.Data.Sqlite.dll (wrapper .NET) precisa da biblioteca NATIVA sqlite3.dll
+para funcionar. Sem ela, ocorre o erro: "sqlite3 assembly:<unknown assembly>"
+
+COMO ADICIONAR:
+
+1. Baixe o zip para Windows x64:
+   https://www.sqlite.org/download.html
+   Procure: "Precompiled Binaries for Windows" > sqlite-dll-win-x64-XXXX.zip
+
+   Link direto (versão 3.52):
+   https://www.sqlite.org/2025/sqlite-dll-win-x64-3520000.zip
+
+2. Extraia o .zip e copie APENAS o arquivo "sqlite3.dll" para esta pasta:
+   Packages/com.playout.cadastro/Plugins/
+
+3. No Unity: o arquivo será importado automaticamente. No Inspector do sqlite3.dll,
+   marque "Load on startup" e selecione as plataformas (Editor, Standalone Win64).
+
+4. IMPORTANTE: Faça commit do sqlite3.dll no Git para não perder de novo!
+
+POR QUE PODE TER SAÍDO:
+- Não foi commitado no Git (binários às vezes são esquecidos)
+- Foi removido ao limpar/exportar o pacote
+- Estava em .gitignore (verifique se *.dll não está ignorado)

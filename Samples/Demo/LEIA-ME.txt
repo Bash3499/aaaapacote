@@ -1,0 +1,38 @@
+================================================================================
+  Playout Cadastro - Sample Demo
+================================================================================
+
+Este sample inclui o prefab "CampoDeCadastro" (ou "-CamposDeCadastro-") para uso plug-and-play.
+
+COMO USAR (para quem importou o sample):
+--------------------------------------
+1. Arraste o prefab para dentro do seu Canvas.
+2. Crie um RegistrationConfig (Create → Playout → Registration Config) e configure
+   quais campos deseja (Nome, E-mail, CPF, etc.).
+3. Selecione o GameObject do formulário na Hierarchy e, no Inspector:
+   - Atribua o RegistrationConfig no campo "Config".
+   - Os InputFields e o texto de feedback já vêm vinculados no prefab.
+4. No botão de enviar, vincule o método ValidateFields() do PackageManager.
+
+Pronto! O formulário está configurado.
+
+================================================================================
+  PARA DESENVOLVEDORES DO PACOTE (exportar o prefab)
+================================================================================
+
+Se você está editando o pacote e quer atualizar o prefab do sample:
+
+1. Abra a cena que contém o formulário (ex.: SampleScene).
+2. Na Hierarchy, selecione o GameObject pai que contém toda a área de cadastro
+   (ex.: -CamposDeCadastro-). Ele deve incluir:
+   - Os InputFields (Nome, Sobrenome, E-mail, etc.)
+   - O texto de feedback (TXT.FeedbackMessage)
+   - O botão de enviar
+   - O componente PackageManager (no root ou em um filho)
+
+3. Arraste o GameObject selecionado para a pasta Samples/Demo/ do pacote
+   (visível no Project em: Packages > com.playout.cadastro > Samples > Demo).
+
+4. Salve o prefab com o nome desejado (ex.: CampoDeCadastro.prefab).
+
+Pronto! O prefab estará disponível para quem importar o sample.
